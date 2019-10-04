@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import {useAxiosCall} from "../customHooks/useAxiosCall";
 
     export function reverseString(str){
@@ -10,10 +10,12 @@ import {useAxiosCall} from "../customHooks/useAxiosCall";
 
     const PlayerCard = props =>{
         const [data, setData] = useAxiosCall("http://localhost:5000/api/players");
+
         console.log("dataaa", data);
 
-
+        
         return (
+            
             <>
             <h1>Welcome to a list of sports people or something</h1>
                 {props.player.map(person => (

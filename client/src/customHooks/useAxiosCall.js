@@ -11,8 +11,9 @@ export function useAxiosCall(search){
     .then(res => {
         console.log("axios res", res)
         setData(res.data)
+        console.log("mydat",data)
     })
     },[search])
-    return data;
     
+    return (data);
 }
